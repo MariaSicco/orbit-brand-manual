@@ -398,6 +398,42 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
 .card .wm{font-size:14cqw}
 .card .mono{font-size:max(6px,3.6cqw)}
 @media (max-width:860px){.merch{grid-template-columns:1fr 1fr}}
+.feedwrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(20px,4vw,72px);align-items:start}
+.phone{background:#fff;color:var(--k);border-radius:34px;padding:14px 0 0;border:10px solid var(--k);max-width:440px;width:100%;justify-self:center;overflow:hidden;box-shadow:0 40px 90px -40px rgba(0,0,0,.5)}
+.ig-top{display:flex;justify-content:space-between;align-items:center;padding:4px 16px 12px;font-weight:700;font-size:15px}
+.ig-prof{display:flex;align-items:center;gap:18px;padding:0 16px}
+.ig-av{width:78px;height:78px;border-radius:50%;background:var(--k);display:grid;place-items:center;flex:none;box-shadow:0 0 0 2px #fff,0 0 0 4px var(--blue)}
+.ig-av svg{width:58%}
+.ig-stats{display:flex;flex:1;justify-content:space-around;text-align:center;font-size:12px;line-height:1.2}
+.ig-stats b{display:block;font-size:16px}
+.ig-bio{padding:10px 16px 0;font-size:13px;line-height:1.35}
+.ig-bio b{display:block}
+.ig-hl{display:flex;gap:14px;padding:14px 16px;overflow:hidden}
+.ig-hl div{display:flex;flex-direction:column;align-items:center;gap:5px;font-size:11px;flex:none}
+.ig-hl i{width:56px;height:56px;border-radius:50%;border:1px solid #ddd;display:grid;place-items:center;padding:3px}
+.ig-hl i span{width:100%;height:100%;border-radius:50%;display:grid;place-items:center;overflow:hidden}
+.ig-hl i svg{width:56%}
+.ig-tabs{display:flex;border-top:1px solid #e6e6e6}
+.ig-tabs span{flex:1;text-align:center;padding:9px 0;font-family:var(--mono);font-size:10px;letter-spacing:.08em}
+.ig-tabs span:first-child{border-top:1px solid var(--k);margin-top:-1px}
+.feed{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:#fff}
+.tile{aspect-ratio:3/4;position:relative;overflow:hidden;container-type:inline-size;display:flex;flex-direction:column;justify-content:space-between;padding:7cqw;transition:opacity .35s,filter .35s}
+.tile h6{margin:0;position:relative;z-index:2;font-size:17cqw;font-weight:800;text-transform:uppercase;letter-spacing:-.05em;line-height:.85}
+.tile h6 .it{letter-spacing:-.03em}
+.tile .mono{position:relative;z-index:2;font-size:max(6px,5.4cqw);letter-spacing:.06em}
+.tile .photo{position:absolute;inset:0;z-index:0}
+.tile .pano{position:absolute;top:0;bottom:0;width:300%;z-index:1}
+.tile .pano svg{position:absolute;width:88%;left:6%;top:50%;transform:translateY(-50%)}
+.tile .tag{position:absolute;inset:auto 0 0 0;z-index:3;background:var(--blue);color:var(--b);padding:4px 7cqw;transform:translateY(101%);transition:transform .3s var(--ease)}
+.tile:hover .tag{transform:none}
+.feed.filt .tile{opacity:.18;filter:grayscale(1)}
+.feed.filt .tile.on{opacity:1;filter:none}
+.feed-side h3{margin:0 0 18px;font-size:clamp(40px,5vw,84px)}
+.feed-rules{list-style:none;margin:28px 0 0;padding:0;counter-reset:r}
+.feed-rules li{display:grid;grid-template-columns:36px 1fr;gap:10px;padding:12px 0;border-top:1px solid rgba(13,13,14,.2);font-size:16px}
+.feed-rules li::before{counter-increment:r;content:counter(r,decimal-leading-zero);font-family:var(--mono);font-size:11px;padding-top:4px;opacity:.55}
+.feed-mix{display:flex;height:10px;margin-top:10px}
+@media (max-width:860px){.feedwrap{grid-template-columns:1fr}}
 
 /* ---------- 13 MOTION ---------- */
 .mo{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--k3)}
@@ -817,6 +853,32 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
     <div class="app-sub"><h3 class="display">Redes y <span class="it">ads</span></h3><span class="mono">29–30 — Editorial en el feed · directo en performance</span></div>
     <div class="soc rv" id="soc"></div>
 
+    <div class="app-sub"><h3 class="display">Grilla del <span class="it">feed</span></h3><span class="mono">29 — Construir reconocimiento antes de vender</span></div>
+    <div class="feedwrap rv">
+      <div class="phone">
+        <div class="ig-top"><span>orbit.studio</span><span style="font-size:18px;letter-spacing:2px">＋ ≡</span></div>
+        <div class="ig-prof"><div class="ig-av" id="igAv"></div><div class="ig-stats"><div><b>12</b>posts</div><div><b>8.420</b>seguidores</div><div><b>96</b>seguidos</div></div></div>
+        <div class="ig-bio"><b>ORBIT®</b>Digital goods for creative people.<br>Ideas in motion. — Est. 2026<br><span style="color:#2743d6">orbit.studio/ob-001</span></div>
+        <div class="ig-hl" id="igHl"></div>
+        <div class="ig-tabs"><span>▦ POSTS</span><span>▷ REELS</span><span>◎ ETIQUETAS</span></div>
+        <div class="feed" id="feed"></div>
+      </div>
+      <div class="feed-side">
+        <span class="mono">Planificación — 12 posts</span>
+        <h3 class="display" style="margin-top:14px">Un feed que se lee como <span class="it">sistema.</span></h3>
+        <p style="margin:0;max-width:44ch;opacity:.75">La grilla se diseña de a filas de tres. Cada fila combina registros distintos para que el perfil completo respire: nunca dos piezas iguales pegadas.</p>
+        <div style="margin-top:24px"><span class="mono" style="display:block;margin-bottom:8px">Filtrar por tipo de pieza</span><div class="row" id="feedFilt" style="display:flex;flex-wrap:wrap;gap:8px"></div></div>
+        <ol class="feed-rules">
+          <li>La primera fila es un panorama: el círculo abierto cruza tres posts y arma “Enter the orbit.”</li>
+          <li>Cada fila mezcla fotografía, editorial y producto o sistema.</li>
+          <li>70–80% neutros (negro, bone, foto B/N) · 20–30% acento. Un color de acento por fila.</li>
+          <li>Todo post lleva metadata: código OB—00X, volumen o fecha.</li>
+          <li>El producto se muestra como objeto, nunca como captura de pantalla.</li>
+        </ol>
+        <div style="margin-top:22px"><span class="mono">Mezcla de color del feed</span><div class="feed-mix" id="feedMix"></div></div>
+      </div>
+    </div>
+
     <div class="app-sub"><h3 class="display">Objetos y <span class="it">merch</span></h3><span class="mono">33–34 — Microbranding: la marca no necesita ser gigante</span></div>
     <div class="merch rv" id="merch"></div>
   </div>
@@ -1232,6 +1294,37 @@ const note = `<div style="width:56%;aspect-ratio:3/4;background:${C.blue};color:
 const sticker = `<div style="display:flex;gap:6%;width:80%;align-items:center;justify-content:center"><div style="width:44%;aspect-ratio:1;border-radius:50%;background:${C.ac};display:grid;place-items:center;transform:rotate(-12deg)">${sym({ring:C.k, dot:C.k}, 'sym', 'width:62%')}</div><div style="width:44%;aspect-ratio:1;border-radius:24%;background:${C.k};display:grid;place-items:center;transform:rotate(8deg)">${sym({ring:C.b, dot:C.or}, 'sym', 'width:62%')}</div></div>`;
 const jacket = `<svg class="item" viewBox="0 0 200 200"><path d="M70 22 L100 34 L130 22 L166 40 L184 150 L162 156 L150 90 L150 190 L50 190 L50 90 L38 156 L16 150 L34 40 Z" fill="#161617"/><path d="M100 34 L100 190" stroke="#2a2a2c" stroke-width="2"/><path d="M70 22 L100 60 L130 22" fill="none" stroke="#2a2a2c" stroke-width="3"/><g transform="translate(112 70) scale(.1)">${symInner({ring:C.b, dot:C.blue, sw:22})}</g><text x="112" y="88" fill="${C.b}" font-family="IBM Plex Mono,monospace" font-size="3.6" letter-spacing=".3">ORBIT® EST.2026</text></svg>`;
 $('#merch').innerHTML = [[tee,'Remera — microbranding'],[jacket,'Chaqueta negra — pecho'],[tote,'Tote bag'],[cards,'Tarjetas'],[note,'Notebook'],[sticker,'Stickers']].map(([h,c]) => `<div>${h}<span class="mono cap">${c}</span></div>`).join('');
+
+/* feed grid */
+$('#igAv').innerHTML = sym({ring:C.b, dot:C.blue});
+$('#igHl').innerHTML = [['Productos',C.k,C.b,C.blue],['Sistema',C.b,C.k,C.or],['Ideas',C.blue,C.b,C.ac],['Estudio',C.or,C.k,C.b],['OB—004',C.ac,C.k,C.k]].map(([n,bg,r,d]) => `<div><i><span style="background:${bg}">${sym({ring:r, dot:d})}</span></i>${n}</div>`).join('');
+const TYPES = {sis:'Sistema', foto:'Fotografía', edit:'Editorial', prod:'Producto'};
+const pano = i => `<div class="pano" style="left:${-100*i}%">${sym({ring:C.b, dot:C.blue, sw:14})}</div>`;
+const TILES = [
+  {t:'sis', bg:C.k, fg:C.b, html:`${pano(0)}<span class="mono">OB—000</span><h6>Enter</h6>`},
+  {t:'sis', bg:C.k, fg:C.b, html:`${pano(1)}<span class="mono" style="text-align:center">Vol.01</span><h6 style="text-align:center">the</h6>`},
+  {t:'sis', bg:C.k, fg:C.b, html:`${pano(2)}<span class="mono" style="text-align:right">2026</span><h6 style="text-align:right">orbit.</h6>`},
+  {t:'foto', bg:'#777', fg:C.b, html:`<div class="photo" data-photo="figure"></div><span class="mono">OB—001</span><h6 style="font-size:15cqw">Build what’s <span class="it">next.</span></h6>`},
+  {t:'edit', bg:C.or, fg:C.k, html:`${sym({ring:C.k, dot:C.b, sw:20}, 'sym', 'position:absolute;width:95%;right:-40%;bottom:-22%')}<span class="mono">Poster 02</span><h6>Ideas<br>in <span class="it">motion.</span></h6>`},
+  {t:'prod', bg:C.b, fg:C.k, html:`<span class="mono">OB—001</span><div style="position:relative;z-index:2"><div style="font-weight:800;font-size:40cqw;letter-spacing:-.05em;line-height:.8">01</div><div class="it" style="font-size:15cqw;line-height:.95;text-transform:uppercase">Content<br>system</div></div><span class="mono">120 assets · V.01</span>`},
+  {t:'edit', bg:C.b, fg:C.k, html:`<span class="mono">Voz</span><h6>Tools<br>that<br><span class="it">move.</span></h6><span class="mono">Orbit® — Digital goods</span>`},
+  {t:'foto', bg:'#777', fg:C.b, html:`<div class="photo" data-photo="corridor"></div><span class="mono">Ideas in motion</span><span class="mono" style="text-align:right">Est. 2026</span>`},
+  {t:'edit', bg:C.blue, fg:C.b, html:`<span class="mono">Manifiesto</span><div class="it" style="position:relative;z-index:2;font-size:15cqw;line-height:1">Las ideas no necesitan más ruido. Necesitan movimiento.</div><span class="mono">OB—M15</span>`},
+  {t:'prod', bg:C.ac, fg:C.k, html:`${sym({ring:C.k, dot:C.k, sw:20}, 'sym', 'position:absolute;width:70%;right:-18%;top:-12%')}<span class="mono">OB—004</span><h6 style="font-size:14cqw">New system <span class="it">coming soon.</span></h6>`},
+  {t:'foto', bg:'#777', fg:C.b, html:`<div class="photo" data-photo="studio"></div><span class="mono">Behind the system</span><h6 style="font-size:13cqw">Make better <span class="it">things.</span></h6>`},
+  {t:'sis', bg:C.k, fg:C.b, html:`<span class="mono">System 01</span><div style="display:grid;grid-template-columns:1fr 1fr;gap:10%;width:78%;margin:0 auto;position:relative;z-index:2">${[0,1,2,3].map(i => sym({ring:C.b, rot:i*90, dot:i===3?C.blue:C.b, sw:22}, 'sym', 'width:100%')).join('')}</div><span class="mono">Create. Explore. Apply. Advance.</span>`},
+];
+const feed = $('#feed');
+feed.innerHTML = TILES.map(x => `<div class="tile" data-t="${x.t}" style="background:${x.bg};color:${x.fg}">${x.html}<span class="mono tag">${TYPES[x.t]}</span></div>`).join('');
+paintPhotos(feed);
+$('#feedFilt').innerHTML = `<button class="chip" data-t="" aria-pressed="true">Todo</button>` + Object.entries(TYPES).map(([k,n]) => `<button class="chip" data-t="${k}" aria-pressed="false">${n} · ${TILES.filter(x => x.t===k).length}</button>`).join('');
+$$('#feedFilt .chip').forEach(b => b.onclick = () => {
+  $$('#feedFilt .chip').forEach(x => x.setAttribute('aria-pressed', String(x === b)));
+  const t = b.dataset.t; feed.classList.toggle('filt', !!t);
+  $$('.tile', feed).forEach(el => el.classList.toggle('on', el.dataset.t === t));
+});
+const mixCount = {}; TILES.forEach(x => mixCount[x.bg] = (mixCount[x.bg]||0) + 1);
+$('#feedMix').innerHTML = Object.entries(mixCount).map(([c,n]) => `<div style="flex:${n};background:${c};box-shadow:inset 0 0 0 1px rgba(13,13,14,.12)" title="${n} posts"></div>`).join('');
 
 /* ---------- 13: motion tiles ---------- */
 const MO = [['open','Abrirse / cerrarse'],['rot','Rotar'],['travel','El punto recorre'],['load','Sistema cargándose'],['curve','Titular en curva'],['color','Cambio de color']];
