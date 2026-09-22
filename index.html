@@ -434,6 +434,74 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
 .feed-rules li::before{counter-increment:r;content:counter(r,decimal-leading-zero);font-family:var(--mono);font-size:11px;padding-top:4px;opacity:.55}
 .feed-mix{display:flex;height:10px;margin-top:10px}
 @media (max-width:860px){.feedwrap{grid-template-columns:1fr}}
+/* ---------- 13 LANZAMIENTO ---------- */
+.ln-intro{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(20px,4vw,64px);align-items:end;margin-bottom:clamp(48px,6vw,96px)}
+.ln-intro h2{font-size:clamp(46px,7vw,120px);margin:0}
+.ln-sub{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;border-top:1px solid var(--k3);padding-top:14px;margin:clamp(56px,7vw,110px) 0 24px}
+.ln-sub h3{margin:0;font-size:clamp(32px,4vw,64px)}
+.phases{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:2px;background:var(--k3)}
+.phases button{background:var(--k);text-align:left;padding:16px;display:flex;flex-direction:column;gap:10px;min-height:150px;transition:background .3s,color .3s}
+.phases button b{font-weight:800;font-size:clamp(20px,2vw,30px);letter-spacing:-.04em;text-transform:uppercase;line-height:.95}
+.phases button[aria-selected="true"]{background:var(--b);color:var(--k)}
+.phases button:hover:not([aria-selected="true"]){background:var(--k2)}
+.phase-body{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(20px,3vw,48px);background:var(--b);color:var(--k);padding:clamp(18px,2.6vw,36px)}
+.phase-body h4{margin:0 0 10px;font-size:clamp(28px,3.2vw,52px);font-weight:800;letter-spacing:-.045em;text-transform:uppercase;line-height:.92}
+.phase-body ul{list-style:none;margin:16px 0 0;padding:0}
+.phase-body li{padding:10px 0;border-top:1px solid rgba(13,13,14,.15);display:grid;grid-template-columns:22px 1fr;gap:8px}
+.phase-body li::before{content:"●";color:var(--blue);font-size:10px;line-height:2.2}
+.phase-body .goal{background:var(--k);color:var(--b);padding:18px;display:flex;flex-direction:column;gap:14px;justify-content:space-between}
+@media (max-width:860px){.phases{grid-template-columns:1fr 1fr}.phase-body{grid-template-columns:1fr}}
+
+.lgrid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(20px,4vw,64px);align-items:start}
+.lgrid .phone{justify-self:center}
+.brief{position:sticky;top:90px;border-top:1px solid var(--b);padding-top:16px}
+.brief h4{margin:10px 0 16px;font-size:clamp(32px,3.6vw,58px);font-weight:800;letter-spacing:-.045em;text-transform:uppercase;line-height:.92}
+.brief dl{display:grid;grid-template-columns:120px 1fr;gap:0;margin:0}
+.brief dt,.brief dd{padding:11px 0;border-top:1px solid var(--k3);margin:0}
+.brief dt{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;opacity:.55;padding-top:14px}
+.brief .copy{font-family:var(--serif);font-style:italic;font-size:19px;line-height:1.3}
+.feed.launch .tile{cursor:pointer}
+.feed.launch .tile.cur{outline:3px solid var(--blue);outline-offset:-3px}
+.feed.launch .tile .ord{position:absolute;right:5cqw;top:5cqw;z-index:3;background:var(--b);color:var(--k);font-family:var(--mono);font-size:max(7px,5cqw);padding:.6cqw 2cqw}
+@media (max-width:860px){.lgrid{grid-template-columns:1fr}.brief{position:static}}
+
+.pillars{display:flex;height:clamp(90px,10vw,140px);gap:2px}
+.pillars button{position:relative;display:flex;flex-direction:column;justify-content:space-between;text-align:left;padding:12px;overflow:hidden;min-width:0;transition:filter .2s}
+.pillars button b{font-weight:800;font-size:clamp(20px,3vw,46px);letter-spacing:-.05em;line-height:.9}
+.pillars button[aria-pressed="false"]{filter:saturate(.3) brightness(.7)}
+.pillar-info{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(20px,3vw,48px);margin-top:22px}
+.pillar-info h4{margin:0;font-size:clamp(28px,3.2vw,52px);font-weight:800;letter-spacing:-.045em;text-transform:uppercase;line-height:.92}
+.pillar-info ul{list-style:none;margin:0;padding:0}
+.pillar-info li{padding:10px 0;border-top:1px solid var(--k3)}
+@media (max-width:860px){.pillar-info{grid-template-columns:1fr}.pillars button b{font-size:18px}.pillars button .mono{display:none}}
+
+.week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:2px;background:var(--k3)}
+.week>div{background:var(--k);padding:14px;min-height:230px;display:flex;flex-direction:column;gap:10px}
+.week .fmt{align-self:flex-start;font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;padding:3px 7px}
+.week b{font-size:17px;letter-spacing:-.02em;line-height:1.1}
+.week p{margin:0;font-size:13px;opacity:.65}
+@media (max-width:960px){.week{grid-template-columns:1fr 1fr}}
+
+.tactics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:2px;background:var(--k3)}
+.tactics>div{background:var(--k);padding:18px;min-height:210px;display:flex;flex-direction:column;justify-content:space-between;gap:16px;transition:background .3s,color .3s}
+.tactics>div:hover{background:var(--b);color:var(--k)}
+.tactics b{display:block;font-size:20px;letter-spacing:-.025em;line-height:1.05;margin-bottom:8px}
+.tactics p{margin:0;font-size:14px;opacity:.7}
+@media (max-width:960px){.tactics{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.tactics{grid-template-columns:1fr}}
+
+.chan{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,1.6vw,24px)}
+.chan>div{border-top:2px solid var(--b);padding-top:14px}
+.chan h4{margin:10px 0 10px;font-size:24px;font-weight:800;letter-spacing:-.035em;text-transform:uppercase}
+.chan ul{list-style:none;margin:0;padding:0}
+.chan li{padding:8px 0;border-top:1px solid var(--k3);font-size:15px}
+.metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(12px,1.6vw,24px)}
+.metrics>div{border-top:1px solid var(--k3);padding-top:14px}
+.metrics b{display:block;font-size:clamp(22px,2.4vw,36px);font-weight:800;letter-spacing:-.04em;text-transform:uppercase;line-height:.95;margin:10px 0 8px}
+.metrics p{margin:0;font-size:14px;opacity:.7}
+@media (max-width:860px){.chan,.metrics{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.chan,.metrics{grid-template-columns:1fr}}
+
 
 /* ---------- 13 MOTION ---------- */
 .mo{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--k3)}
@@ -884,19 +952,65 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
   </div>
 </section>
 
-<!-- ================= 13 MOTION ================= -->
-<section class="sec dark" id="motion" data-ch="13 — Motion">
+<!-- ================= 13 LANZAMIENTO ================= -->
+<section class="sec dark" id="lanzamiento" data-ch="13 — Lanzamiento">
   <div class="wrap">
-    <div class="shead"><div class="n"><b>13</b>Movimiento</div><div class="n" style="text-align:right">Rápido. Preciso. Editorial.<br>Nunca espacial.</div></div>
+    <div class="shead"><div class="n"><b>13</b>Estrategia de lanzamiento<br>Instagram desde cero</div><div class="n" style="text-align:right">Reconocimiento antes de vender.<br>Impacto antes que volumen.</div></div>
+    <div class="ln-intro">
+      <h2 class="display rv">Entrar en órbita <span class="it">desde cero.</span></h2>
+      <div class="rv">
+        <p class="lead" style="margin:0 0 16px">Un perfil nuevo no compite por cantidad: compite por impacto. La estrategia es generar curiosidad, revelar la marca como un evento y recién después vender, con cada pieza a la altura de la identidad.</p>
+        <p class="mono dim" style="margin:0">Idea eje de toda la comunicación: problema → herramienta.</p>
+      </div>
+    </div>
+
+    <div class="ln-sub" style="margin-top:0"><h3 class="display">Las 5 <span class="it">fases</span></h3><span class="mono">De la semana −2 al día 90 · tocá cada fase</span></div>
+    <div class="phases rv" role="tablist" id="phases"></div>
+    <div class="phase-body rv" id="phaseBody" role="tabpanel"></div>
+
+    <div class="ln-sub"><h3 class="display">Los primeros <span class="it">9 posts</span></h3><span class="mono">La grilla de lanzamiento · tocá un post para ver su brief</span></div>
+    <div class="lgrid">
+      <div class="phone rv">
+        <div class="ig-top"><span>orbit.studio</span><span style="font-size:18px;letter-spacing:2px">＋ ≡</span></div>
+        <div class="ig-prof"><div class="ig-av" id="lnAv"></div><div class="ig-stats"><div><b>9</b>posts</div><div><b>—</b>seguidores</div><div><b>—</b>seguidos</div></div></div>
+        <div class="ig-bio"><b>ORBIT®</b>Problema → herramienta.<br>Digital goods for creative people. Est. 2026<br><span style="color:#2743d6">orbit.studio — lista de espera</span></div>
+        <div class="ig-tabs" style="margin-top:12px"><span>▦ POSTS</span><span>▷ REELS</span><span>◎ ETIQUETAS</span></div>
+        <div class="feed launch" id="lnFeed"></div>
+      </div>
+      <div class="brief rv" id="brief" aria-live="polite"></div>
+    </div>
+
+    <div class="ln-sub"><h3 class="display">Pilares de <span class="it">contenido</span></h3><span class="mono">Qué se publica y en qué proporción</span></div>
+    <div class="pillars rv" id="pillars"></div>
+    <div class="pillar-info rv" id="pillarInfo"></div>
+
+    <div class="ln-sub"><h3 class="display">Semana <span class="it">tipo</span></h3><span class="mono">Desde el día 31 · stories todos los días</span></div>
+    <div class="week rv" id="week"></div>
+
+    <div class="ln-sub"><h3 class="display">Cómo traer <span class="it">seguidores</span></h3><span class="mono">Tácticas de crecimiento para una cuenta nueva</span></div>
+    <div class="tactics" id="tactics"></div>
+
+    <div class="ln-sub"><h3 class="display">Más allá de <span class="it">Instagram</span></h3><span class="mono">El lanzamiento de marca es multicanal</span></div>
+    <div class="chan" id="chan"></div>
+
+    <div class="ln-sub"><h3 class="display">Qué <span class="it">medir</span></h3><span class="mono">Revisión semanal · ajustar lo que no funciona</span></div>
+    <div class="metrics" id="metrics"></div>
+  </div>
+</section>
+
+<!-- ================= 13 MOTION ================= -->
+<section class="sec dark" id="motion" data-ch="14 — Motion">
+  <div class="wrap">
+    <div class="shead"><div class="n"><b>14</b>Movimiento</div><div class="n" style="text-align:right">Rápido. Preciso. Editorial.<br>Nunca espacial.</div></div>
     <div class="mo" id="mo"></div>
     <div class="motion-rules rv"><span>Rápido.</span><span>Preciso.</span><span class="it">Editorial.</span></div>
   </div>
 </section>
 
 <!-- ================= 14 PRINCIPIOS ================= -->
-<section class="sec light" id="principios" data-ch="14 — Principios">
+<section class="sec light" id="principios" data-ch="15 — Principios">
   <div class="wrap">
-    <div class="shead"><div class="n"><b>14</b>Principios</div><div class="n" style="text-align:right">Impacto · Reconocimiento · Límites</div></div>
+    <div class="shead"><div class="n"><b>15</b>Principios</div><div class="n" style="text-align:right">Impacto · Reconocimiento · Límites</div></div>
     <div class="pri">
       <div class="rv">
         <span class="mono">35 — Principio de impacto</span>
@@ -933,9 +1047,9 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
 </section>
 
 <!-- ================= 15 MANIFIESTO ================= -->
-<section class="sec dark" id="manifiesto" data-ch="15 — Manifiesto">
+<section class="sec dark" id="manifiesto" data-ch="16 — Manifiesto">
   <div class="wrap">
-    <div class="shead"><div class="n"><b>15</b>Manifiesto</div><div class="n" style="text-align:right">OB—M15</div></div>
+    <div class="shead"><div class="n"><b>16</b>Manifiesto</div><div class="n" style="text-align:right">OB—M15</div></div>
     <p class="mani" id="mani">Las ideas no necesitan más ruido. Necesitan <span class="it blue">movimiento.</span> Una buena herramienta puede convertir una idea en un sistema. Un sistema puede convertir intención en acción. Y la acción puede convertirse en <span class="it">progreso.</span> Para quienes construyen. Prueban. Crean. Iteran. Hacen. No buscamos agregar más cosas. Buscamos crear las <span class="it">correctas.</span></p>
   </div>
 </section>
@@ -1325,6 +1439,81 @@ $$('#feedFilt .chip').forEach(b => b.onclick = () => {
 });
 const mixCount = {}; TILES.forEach(x => mixCount[x.bg] = (mixCount[x.bg]||0) + 1);
 $('#feedMix').innerHTML = Object.entries(mixCount).map(([c,n]) => `<div style="flex:${n};background:${c};box-shadow:inset 0 0 0 1px rgba(13,13,14,.12)" title="${n} posts"></div>`).join('');
+
+/* ---------- 13: lanzamiento ---------- */
+const PHASES = [
+  {n:'Semana −2 a 0', t:'Preparación', h:'Todo listo antes del primer post.', items:['Perfil completo: bio con el lema “Problema → herramienta”, link a la lista de espera, 4 destacados (Productos, Sistema, Ideas, OB—004).','Los primeros 9 posts diseñados y programados: el perfil tiene que verse terminado desde el día 1.','Banco de 30 piezas: carruseles, posters y reels cortos del símbolo.','Lista de espera activa en la web con una muestra gratis (el prompt del AI Workflow).','Elegir 5–10 creadores o estudios afines para colaborar en la revelación.'], goal:'Que quien llegue por primera vez sienta que Orbit ya es una marca, no un proyecto.', kpi:'Perfil 100% listo · 9 posts programados · lista de espera online'},
+  {n:'Días 1–7', t:'Teaser', h:'Curiosidad: algo está entrando en órbita.', items:['3 posts enigmáticos: el símbolo solo, un crop gigante del círculo, una foto B/N con “Build what’s next.”','Nunca se explica qué es. Solo códigos (OB—000), el punto azul y una fecha.','Stories diarias con cuenta regresiva y encuestas: “¿Qué problema te gustaría resolver?”','Las respuestas se guardan: son ideas de producto y de contenido.'], goal:'Generar preguntas. Que la gente vuelva al perfil a ver qué pasa.', kpi:'Visitas al perfil · respuestas a encuestas · recordatorios de la cuenta regresiva'},
+  {n:'Días 8–14', t:'Revelación', h:'La marca se presenta como un evento.', items:['Panorama de 3 posts “Enter / the / orbit.” publicados el mismo día: la grilla se transforma.','Reel del símbolo animado: se abre, el punto recorre la órbita, aparece “Ideas in motion.”','Carrusel manifiesto: “Las ideas no necesitan más ruido.”','Collab posts con los creadores elegidos el mismo día de la revelación.','Pequeña pauta paga para el reel de revelación, segmentada por intereses de diseño, negocios y productividad.'], goal:'Que se entienda qué es Orbit y cuál es su estética en un solo scroll.', kpi:'Alcance · compartidos · nuevos seguidores del día de revelación'},
+  {n:'Días 15–30', t:'Primer drop', h:'OB—001 como objeto de colección.', items:['Teaser del producto como caja 3D: número, nombre, descriptor. Nunca una captura.','Carrusel “Problema → herramienta”: el problema tachado en naranja, la solución con código OB.','Reel demo de 20 segundos: el sistema en uso, sin voz, con texto editorial.','Precio de lanzamiento 72 h solo para la lista de espera.','Pedir a los primeros compradores que muestren lo que armaron (contenido de la comunidad).'], goal:'Convertir la atención en las primeras ventas y en los primeros casos reales.', kpi:'Clics al link · ventas OB—001 · emails nuevos'},
+  {n:'Días 31–90', t:'Ritmo', h:'Un sistema editorial que se sostiene.', items:['4–5 posts por semana con la mezcla de pilares definida abajo.','Una serie fija por semana: “Problema → herramienta” todos los lunes.','Nuevo producto u OB—004 anunciado con la misma lógica teaser → revelación → drop.','Colaboraciones mensuales con creadores de nicho.','Revisión semanal de métricas y ajuste de formatos.'], goal:'Crecimiento constante sin perder el nivel visual.', kpi:'Guardados por post · crecimiento semanal · ventas por fuente'},
+];
+let phI = 0;
+function renderPhase() {
+  const f = PHASES[phI];
+  $('#phases').innerHTML = PHASES.map((x,i) => `<button role="tab" aria-selected="${i===phI}" data-i="${i}"><span class="mono">0${i} · ${x.n}</span><b>${x.t}</b></button>`).join('');
+  $$('#phases button').forEach(b => b.onclick = () => { phI = +b.dataset.i; renderPhase(); });
+  $('#phaseBody').innerHTML = `<div><span class="mono">Fase 0${phI} — ${f.n}</span><h4 style="margin-top:12px">${f.h}</h4><ul>${f.items.map(x => `<li>${x}</li>`).join('')}</ul></div>
+    <div class="goal"><div><span class="mono dim">Objetivo</span><p class="it" style="font-size:clamp(22px,2.2vw,32px);line-height:1.1;margin:10px 0 0">${f.goal}</p></div><div><span class="mono dim">Qué mirar</span><p class="mono" style="margin:8px 0 0;opacity:1">${f.kpi}</p></div></div>`;
+}
+renderPhase();
+
+$('#lnAv').innerHTML = sym({ring:C.b, dot:C.blue});
+const lpano = i => `<div class="pano" style="left:${-100*i}%">${sym({ring:C.b, dot:C.blue, sw:14})}</div>`;
+/* orden de publicación 1–9; la grilla muestra lo más nuevo arriba a la izquierda */
+const LPOSTS = [
+  {ord:1, day:'Día 1', fase:'Teaser', fmt:'Post', bg:C.k, fg:C.b, html:`${sym({ring:C.b, dot:C.blue, sw:20},'sym','position:absolute;width:56%;left:22%;top:26%')}<span class="mono">OB—000</span><span></span>`, title:'El símbolo, solo', copy:'Algo está entrando en órbita.', goal:'Intriga. Primera pieza que ve la gente: sin nombre, sin explicación.', cta:'Activá las notificaciones.'},
+  {ord:2, day:'Día 3', fase:'Teaser', fmt:'Post', bg:C.blue, fg:C.b, html:`${sym({ring:C.b, dot:C.ac, sw:22, rot:150},'sym','position:absolute;width:190%;left:-10%;top:-95%')}<span class="mono">OB—000</span><h6 style="margin-top:auto">Soon.</h6>`, title:'Crop del círculo', copy:'No hace falta verlo completo para reconocerlo.', goal:'Instalar el color y la forma antes que el nombre.', cta:'¿Qué creés que es? Comentalo.'},
+  {ord:3, day:'Día 5', fase:'Teaser', fmt:'Post', bg:'#777', fg:C.b, html:`<div class="photo" data-photo="figure"></div><span class="mono">OB—000</span><h6 style="font-size:15cqw">Build what’s <span class="it">next.</span></h6>`, title:'Build what’s next', copy:'Mismas personas. Ideas más grandes. Nuevas herramientas.', goal:'Sumar el universo humano y la fotografía B/N.', cta:'Día 8.'},
+  {ord:4, day:'Día 8 · 1º', fase:'Revelación', fmt:'Post', bg:C.k, fg:C.b, html:`${lpano(2)}<span class="mono" style="text-align:right">2026</span><h6 style="text-align:right">orbit.</h6>`, title:'Panorama · derecha', copy:'(Se publica primero para que el panorama quede en orden.)', goal:'Armar la fila “Enter the orbit.” en la grilla.', cta:'—'},
+  {ord:5, day:'Día 8 · 2º', fase:'Revelación', fmt:'Post', bg:C.k, fg:C.b, html:`${lpano(1)}<span class="mono" style="text-align:center">Vol.01</span><h6 style="text-align:center">the</h6>`, title:'Panorama · centro', copy:'(Segundo en publicarse.)', goal:'Completar la fila del panorama.', cta:'—'},
+  {ord:6, day:'Día 8 · 3º', fase:'Revelación', fmt:'Post', bg:C.k, fg:C.b, html:`${lpano(0)}<span class="mono">OB—000</span><h6>Enter</h6>`, title:'Panorama · izquierda', copy:'Enter the orbit. Orbit crea herramientas digitales para convertir problemas en sistemas que funcionan.', goal:'La revelación: el perfil completo cambia de golpe.', cta:'Link en bio: lista de espera.'},
+  {ord:7, day:'Día 10', fase:'Revelación', fmt:'Carrusel', bg:C.b, fg:C.k, html:`<span class="mono">Manifiesto</span><div class="it" style="position:relative;z-index:2;font-size:15cqw;line-height:1">Las ideas no necesitan más ruido.</div><span class="mono">1 / 6</span>`, title:'Carrusel manifiesto', copy:'Las ideas no necesitan más ruido. Necesitan movimiento. (6 slides, una frase por slide.)', goal:'Fijar la voz y la postura de la marca. Pieza para guardar y compartir.', cta:'Compartilo con alguien que está construyendo algo.'},
+  {ord:8, day:'Día 12', fase:'Revelación', fmt:'Reel', bg:C.k, fg:C.b, html:`${sym({ring:C.b, dot:C.or, sw:20, gap:120},'sym','position:absolute;width:62%;left:19%;top:18%')}<span class="mono">▷ Reel</span><h6 style="font-size:13cqw;margin-top:auto">Ideas in <span class="it">motion.</span></h6>`, title:'Reel: el símbolo en movimiento', copy:'Ideas in motion. (6–8 s, loop: la O se abre, el punto recorre la órbita.)', goal:'Pieza de alcance: el reel se puede impulsar con pauta.', cta:'Seguinos para ver qué sale primero.'},
+  {ord:9, day:'Día 15', fase:'Primer drop', fmt:'Carrusel', bg:C.b, fg:C.k, html:`<span class="mono">OB—001</span><div style="position:relative;z-index:2"><div style="font-weight:800;font-size:40cqw;letter-spacing:-.05em;line-height:.8">01</div><div class="it" style="font-size:14cqw;line-height:.95;text-transform:uppercase">Content<br>system</div></div><span class="mono">Lista de espera</span>`, title:'Drop OB—001', copy:'Problema: no sé qué publicar esta semana. Herramienta: OB—001 Content System. 72 h de precio de lanzamiento para la lista de espera.', goal:'Primeras ventas. El producto se muestra como objeto.', cta:'Link en bio.'},
+];
+const lfeed = $('#lnFeed'); let lCur = 9;
+const ordered = [...LPOSTS].sort((a,b) => b.ord - a.ord);
+lfeed.innerHTML = ordered.map(x => `<div class="tile" role="button" tabindex="0" data-ord="${x.ord}" style="background:${x.bg};color:${x.fg}" aria-label="Post ${x.ord}: ${x.title}">${x.html}<span class="ord">${x.ord}</span></div>`).join('');
+paintPhotos(lfeed);
+function renderBrief() {
+  const x = LPOSTS.find(p => p.ord === lCur);
+  $$('.tile', lfeed).forEach(t => t.classList.toggle('cur', +t.dataset.ord === lCur));
+  $('#brief').innerHTML = `<span class="mono">Post ${String(x.ord).padStart(2,'0')} / 09 · ${x.fase}</span><h4>${x.title}</h4>
+    <dl><dt>Cuándo</dt><dd>${x.day}</dd><dt>Formato</dt><dd>${x.fmt}</dd><dt>Copy</dt><dd class="copy">${x.copy}</dd><dt>Objetivo</dt><dd>${x.goal}</dd><dt>CTA</dt><dd>${x.cta}</dd></dl>
+    <p class="mono dim" style="margin-top:18px">Los números marcan el orden de publicación. Instagram muestra lo último arriba a la izquierda: por eso el panorama se publica de derecha a izquierda.</p>`;
+}
+lfeed.addEventListener('click', e => { const t = e.target.closest('.tile'); if (t) { lCur = +t.dataset.ord; renderBrief(); } });
+lfeed.addEventListener('keydown', e => { const t = e.target.closest('.tile'); if (t && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); lCur = +t.dataset.ord; renderBrief(); } });
+renderBrief();
+
+const PILLARS = [
+  {n:'Problema → herramienta', p:35, bg:C.blue, fg:C.b, d:'Carruseles educativos que toman un problema real y lo resuelven. Es el corazón de la marca y lo que más se guarda.', ex:['“5 señales de que tu negocio necesita un sistema”','“Cómo planificar un mes de contenido en una tarde”','“El error que hace que empieces cada diseño de cero”']},
+  {n:'Editorial y cultura', p:20, bg:C.b, fg:C.k, d:'Posters, frases del manifiesto y fotografía. Construyen reconocimiento y hacen que el perfil se vea como una marca cultural.', ex:['Posters: Enter the orbit · Ideas in motion','Frases del manifiesto en serif itálica','Fotografía B/N de personas creando']},
+  {n:'Detrás del sistema', p:20, bg:C.k, fg:C.b, d:'El proceso: cómo se piensa y se construye cada herramienta. Genera confianza y muestra el nivel de diseño.', ex:['Reel: del boceto al producto terminado','“Por qué OB—003 tiene 8 módulos y no 20”','Pantallas del sistema en construcción']},
+  {n:'Producto como objeto', p:15, bg:C.ac, fg:C.k, d:'Drops, demos y lanzamientos. Siempre como objeto de colección, nunca como captura suelta.', ex:['Caja 3D con número y descriptor','Demo de 20 s sin voz','Precio de lanzamiento para la lista de espera']},
+  {n:'Comunidad', p:10, bg:C.or, fg:C.k, d:'Encuestas, preguntas, lo que arman los usuarios y pedidos a medida. Da ideas de producto y hace que la gente participe.', ex:['“¿Qué problema querés que resolvamos?”','Repost de lo que armaron los compradores','Casos de pedidos a medida']},
+];
+let pilI = 0;
+function renderPillars() {
+  $('#pillars').innerHTML = PILLARS.map((x,i) => `<button style="flex:${x.p};background:${x.bg};color:${x.fg}" aria-pressed="${i===pilI}" data-i="${i}"><span class="mono">${x.n}</span><b>${x.p}%</b></button>`).join('');
+  $$('#pillars button').forEach(b => b.onclick = () => { pilI = +b.dataset.i; renderPillars(); });
+  const x = PILLARS[pilI];
+  $('#pillarInfo').innerHTML = `<div><span class="mono">Pilar 0${pilI+1} · ${x.p}% del contenido</span><h4 style="margin-top:12px">${x.n}</h4><p style="opacity:.75;max-width:46ch">${x.d}</p></div><div><span class="mono dim">Ideas de piezas</span><ul style="margin-top:10px">${x.ex.map(e => `<li>${e}</li>`).join('')}</ul></div>`;
+}
+renderPillars();
+
+const WEEK = [['Lun','Carrusel',C.blue,C.b,'Problema → herramienta','La serie fija de la semana. Se guarda y se comparte.'],['Mar','Reel',C.k,C.b,'Detrás del sistema','Proceso real, 15–25 s, texto editorial en pantalla.'],['Mié','Post',C.b,C.k,'Poster editorial','Una frase de la marca con la tipografía del sistema.'],['Jue','Carrusel',C.blue,C.b,'Guía guardable','Checklist o paso a paso útil para cualquier disciplina.'],['Vie','Reel',C.ac,C.k,'Producto en uso','Demo corta de un producto como objeto.'],['Sáb','Stories',C.or,C.k,'Comunidad','Encuestas, preguntas y reposts de usuarios.'],['Dom','Stories','#333',C.b,'Pausa activa','Repost de la semana y adelanto de lo que viene.']];
+$('#week').innerHTML = WEEK.map(([d,f,bg,fg,t,p]) => `<div class="rv"><span class="mono">${d}</span><span class="fmt" style="background:${bg};color:${fg}">${f}</span><b>${t}</b><p>${p}</p></div>`).join('');
+
+const TACT = [['01','Gancho en el primer segundo','Cada reel abre con el problema escrito en pantalla. Si no engancha en 1 s, no se ve.'],['02','Contenido para guardar','Carruseles útiles (guías, checklists, métodos). Los guardados le dicen al algoritmo que la pieza tiene valor.'],['03','Collabs con creadores de nicho','Posts en colaboración con diseñadores, estudios y consultores: aparecen en los dos perfiles.'],['04','Muestra gratis a cambio del email','El prompt del AI Workflow o una plantilla gratis. Suma seguidores y lista de espera a la vez.'],['05','Responder en la primera hora','Contestar cada comentario apenas se publica: más conversación, más alcance.'],['06','Pocos hashtags, muy de nicho','3–5 hashtags específicos (#notiontemplates, #sistemasdediseño) en vez de 30 genéricos.'],['07','Pauta chica en los picos','Impulsar solo el reel de revelación y el drop, con presupuesto bajo y segmentación por intereses.'],['08','Contenido de la comunidad','Repostear lo que arman los compradores. Prueba social real y contenido nuevo sin costo.']];
+$('#tactics').innerHTML = TACT.map(([n,t,p]) => `<div class="rv"><span class="mono">${n}</span><div><b>${t}</b><p>${p}</p></div></div>`).join('');
+
+const CHAN = [['Web','orbit.studio',['Lista de espera con muestra gratis desde la fase de preparación','Quiz “Encontrá tu sistema” como puerta de entrada','Página del drop lista el día 15']],['Email','Lista de espera',['Email 1: bienvenida + manifiesto','Email 2: detrás del sistema (día 10)','Email 3: drop OB—001 con precio de lanzamiento 72 h']],['Behance · LinkedIn · TikTok','Reutilizar y amplificar',['Publicar el caso de branding de Orbit en Behance: llega a la comunidad de diseño','LinkedIn: el lado negocio (Business OS, procesos)','TikTok: los mismos reels del símbolo y demos']]];
+$('#chan').innerHTML = CHAN.map(([t,s2,li]) => `<div class="rv"><span class="mono">${s2}</span><h4>${t}</h4><ul>${li.map(x => `<li>${x}</li>`).join('')}</ul></div>`).join('');
+
+const MET = [['Atención','Alcance y visitas al perfil','¿Llega el contenido a gente nueva?'],['Valor','Guardados y compartidos','¿El contenido sirve? Es la métrica más importante.'],['Intención','Clics al link y emails','¿Quieren saber más y dejan sus datos?'],['Venta','Compras por fuente','¿Qué pieza o canal trajo cada venta?']];
+$('#metrics').innerHTML = MET.map(([k,t,p],i) => `<div class="rv"><span class="mono">0${i+1} · ${k}</span><b>${t}</b><p>${p}</p></div>`).join('');
 
 /* ---------- 13: motion tiles ---------- */
 const MO = [['open','Abrirse / cerrarse'],['rot','Rotar'],['travel','El punto recorre'],['load','Sistema cargándose'],['curve','Titular en curva'],['color','Cambio de color']];
