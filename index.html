@@ -44,6 +44,12 @@ p{text-wrap:pretty}
 .sec{position:relative;padding-inline:var(--pad);padding-block:clamp(72px,10vw,150px);overflow:hidden}
 .light{background:var(--b);color:var(--k)}
 main>section.sec:not(.hero){min-height:100svh;display:flex;flex-direction:column;justify-content:center}
+/* subsecciones: cada bloque ocupa una pantalla */
+section[data-scr]{padding-block:0!important}
+.scr{min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding-block:clamp(64px,8vh,110px) clamp(40px,6vh,80px)}
+.scr+.scr{border-top:1px solid color-mix(in srgb,currentColor 14%,transparent)}
+.scr>:first-child{margin-top:0!important}
+.scr>:last-child{margin-bottom:0!important}
 .dark{background:var(--k);color:var(--b)}
 .wrap{max-width:1440px;width:100%;margin-inline:auto;position:relative}
 .g12{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(12px,1.6vw,24px);row-gap:40px}
@@ -601,9 +607,10 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
 </section>
 
 <!-- ================= 01 MARCA ================= -->
-<section class="sec light" id="marca" data-ch="01 — Marca">
+<section class="sec light" id="marca" data-ch="01 — Marca" data-scr="1">
   <div class="wrap">
-    <div class="shead"><div class="n"><b>01</b>Marca</div><div class="n" style="text-align:right">Visión general<br>OB—M01</div></div>
+<div class="scr">
+<div class="shead"><div class="n"><b>01</b>Marca</div><div class="n" style="text-align:right">Visión general<br>OB—M01</div></div>
     <div class="g12">
       <div class="m-intro rv">
         <h2>Más ideas.<br>Más <span class="it">movimiento.</span></h2>
@@ -620,8 +627,9 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
         <div><span class="mono">Orbit vende</span><strong>Recursos para volver real una idea.</strong></div>
       </div>
     </div>
-
-    <div class="flow rv" id="flow">
+</div>
+<div class="scr">
+<div class="flow rv" id="flow">
       <div class="flow-top">
         <h3 class="display">Ideas in <span class="it">motion.</span></h3>
         <p class="mono" style="margin:0;max-width:36ch">Idea central — una idea nunca queda quieta. Se desarrolla, se conecta, encuentra un sistema y se ejecuta.</p>
@@ -638,8 +646,9 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
         <button data-i="3"><span class="mono">04</span><b>Resultado</b><p>Se ejecuta. Se convierte en algo.</p></button>
       </div>
     </div>
-
-    <div class="bwn rv">
+</div>
+<div class="scr">
+<div class="bwn rv">
       <div class="photo" data-photo="figure" role="img" aria-label="Fotografía en blanco y negro: persona de espaldas frente al cielo"></div>
       <div class="txt">
         <div class="meta"><span class="mono">OB—001</span><span class="mono" style="text-align:right">Creative tools<br>Real progress</span></div>
@@ -647,13 +656,15 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
         <div class="meta"><span class="mono">La órbita no es astronomía:<br>es trayectoria, ciclo, conexión y progreso.</span><span class="mono" style="text-align:right">Same creators.<br>Bigger ideas.<br>New tools.</span></div>
       </div>
     </div>
+</div>
   </div>
 </section>
 
 <!-- ================= 02 POSICIONAMIENTO ================= -->
-<section class="sec dark" id="posicionamiento" data-ch="02 — Posicionamiento">
+<section class="sec dark" id="posicionamiento" data-ch="02 — Posicionamiento" data-scr="1">
   <div class="wrap">
-    <div class="shead"><div class="n"><b>02</b>Posicionamiento<br>y personalidad</div><div class="n" style="text-align:right">OB—M02</div></div>
+<div class="scr">
+<div class="shead"><div class="n"><b>02</b>Posicionamiento<br>y personalidad</div><div class="n" style="text-align:right">OB—M02</div></div>
     <div class="g12">
       <div class="p-head rv"><h2 class="display">Una marca que fabrica <span class="it">herramientas,</span> no una tienda de descargables.</h2></div>
       <div class="p-formula rv" style="margin-top:20px">
@@ -664,6 +675,10 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
         <div><span class="mono">Más lejos de</span><ul class="strike"><li>Etsy</li><li>Una tienda de templates</li><li>Un marketplace de PDFs</li><li>Un curso de marketing</li><li>Una startup SaaS genérica</li></ul></div>
         <div><span class="mono">Orbit no compite por cantidad. Nunca dice</span><ul class="strike"><li>“10.000 archivos”</li><li>“500 prompts”</li><li>“Mega pack”</li><li>“Todo lo que necesitás en un solo bundle”</li></ul></div>
       </div>
+    </div>
+</div>
+<div class="scr">
+<div class="g12">
       <div class="pers rv">
         <div class="shead" style="margin-bottom:28px;border-color:var(--k3)"><div class="n">Personalidad</div><div class="n" style="text-align:right">Editorial + brutalista + digital + creativa</div></div>
         <div class="pers-words"><span>Creativa</span><span>Directa</span><span>Contemporánea</span><span>Gráfica</span><span>Inteligente</span><span>Dinámica</span><span>Precisa</span><span>Cultural</span><span>Funcional</span></div>
@@ -675,18 +690,22 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
         </div>
       </div>
     </div>
+</div>
   </div>
 </section>
 
 <!-- ================= 03 LOGO ================= -->
-<section class="sec light" id="logotipo" data-ch="03 — Logotipo">
+<section class="sec light" id="logotipo" data-ch="03 — Logotipo" data-scr="1">
   <div class="wrap">
-    <div class="shead"><div class="n"><b>03</b>Logotipo</div><div class="n" style="text-align:right">Construcción<br>Proporción · Área de respeto</div></div>
+<div class="scr">
+<div class="shead"><div class="n"><b>03</b>Logotipo</div><div class="n" style="text-align:right">Construcción<br>Proporción · Área de respeto</div></div>
     <div class="g12" style="margin-bottom:40px">
       <h2 class="display rv" style="grid-column:1/8;margin:0;font-size:clamp(46px,7vw,112px)">Un wordmark pesado con una <span class="it">O</span> que no termina de cerrarse.</h2>
       <p class="lead rv" style="grid-column:9/13;align-self:end;margin:0">No es una tipografía escrita sin más. La O se interrumpe: esa apertura es movimiento, continuidad y una idea que todavía puede evolucionar. El punto es el nodo, el cursor, la señal.</p>
     </div>
-    <div class="logo-stage rv" id="logoStage" data-cons="1" data-clear="0" data-grid="0">
+</div>
+<div class="scr">
+<div class="logo-stage rv" id="logoStage" data-cons="1" data-clear="0" data-grid="0">
       <span class="wm" id="logoWm"><svg class="o sym" viewBox="0 0 100 100" aria-hidden="true"></svg>RBIT</span>
       <svg class="ov" id="logoOv" aria-hidden="true"></svg>
     </div>
@@ -700,6 +719,7 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
       <div class="rv"><span class="mono">Área de respeto</span><h4>x = Ø interior de la O</h4><p>El espacio libre alrededor del logo se mide con el diámetro interior de la O. Peso + aire: nunca aparece comprimido.</p></div>
       <div class="rv"><span class="mono">Tamaño mínimo</span><h4>72 px · 18 mm</h4><p>Por debajo, se usa el símbolo solo. El símbolo funciona desde 16 px hasta una pared completa.</p></div>
     </div>
+</div>
   </div>
 </section>
 
@@ -712,9 +732,10 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
 </section>
 
 <!-- ================= 05 SIMBOLO ================= -->
-<section class="sec dark" id="simbolo" data-ch="05 — Símbolo">
+<section class="sec dark" id="simbolo" data-ch="05 — Símbolo" data-scr="1">
   <div class="wrap">
-    <div class="shead"><div class="n"><b>05</b>Símbolo</div><div class="n" style="text-align:right">Círculo incompleto + apertura + punto</div></div>
+<div class="scr">
+<div class="shead"><div class="n"><b>05</b>Símbolo</div><div class="n" style="text-align:right">Círculo incompleto + apertura + punto</div></div>
     <div class="sy-grid">
       <div class="sy-stage rv" id="syStage">
         <span class="mono code">OB—S01</span>
@@ -737,36 +758,44 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
         </div>
       </div>
     </div>
-    <div class="meaning">
+</div>
+<div class="scr">
+<div class="meaning">
       <div class="rv"><div id="mean1"></div><b>Sistema</b><em>el círculo</em></div>
       <div class="rv"><div id="mean2"></div><b>Posibilidad</b><em>la apertura</em></div>
       <div class="rv"><div id="mean3"></div><b>Acción</b><em>el punto</em></div>
     </div>
     <div class="scale rv" id="scale"></div>
+</div>
   </div>
 </section>
 
 <!-- ================= 06 COLOR ================= -->
-<section class="sec light" id="color" data-ch="06 — Color">
+<section class="sec light" id="color" data-ch="06 — Color" data-scr="1">
   <div class="wrap">
-    <div class="shead"><div class="n"><b>06</b>Paleta de color</div><div class="n" style="text-align:right">Base sólida.<br>Acento estratégico.<br>Máximo impacto.</div></div>
+<div class="scr">
+<div class="shead"><div class="n"><b>06</b>Paleta de color</div><div class="n" style="text-align:right">Base sólida.<br>Acento estratégico.<br>Máximo impacto.</div></div>
     <div class="g12" style="margin-bottom:40px">
       <h2 class="display rv" style="grid-column:1/9;margin:0;font-size:clamp(46px,7vw,112px)">El color no es ruido. Es una <span class="it">interrupción</span> estratégica.</h2>
       <p class="mono rv" style="grid-column:10/13;align-self:end;margin:0">Tocá un color para copiar su HEX.</p>
     </div>
     <div class="pal rv" id="pal"></div>
-    <div class="ratio rv">
+</div>
+<div class="scr">
+<div class="ratio rv">
       <div style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap"><span class="mono">Proporción — 70–80% neutros · 20–30% acento</span><div class="sw" id="ratioSw" style="gap:6px"></div></div>
       <div class="ratio-bar" id="ratioBar"></div>
     </div>
     <div class="combos" id="combos"></div>
+</div>
   </div>
 </section>
 
 <!-- ================= 07 TIPOGRAFIA ================= -->
-<section class="sec dark" id="tipografia" data-ch="07 — Tipografía">
+<section class="sec dark" id="tipografia" data-ch="07 — Tipografía" data-scr="1">
   <div class="wrap">
-    <div class="shead"><div class="n"><b>07</b>Tipografía</div><div class="n" style="text-align:right">Sans brutal + serif editorial<br>= la tensión del sistema</div></div>
+<div class="scr">
+<div class="shead"><div class="n"><b>07</b>Tipografía</div><div class="n" style="text-align:right">Sans brutal + serif editorial<br>= la tensión del sistema</div></div>
     <div class="ty-regs">
       <div class="reg rv">
         <span class="mono">15.1 — Títulos</span>
@@ -787,8 +816,9 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
         <div class="chars mono" style="font-size:14px">ABCDEFGHIJKLMNÑOPQRSTUVWXYZ 0123456789 —/·</div>
       </div>
     </div>
-
-    <div class="play rv">
+</div>
+<div class="scr">
+<div class="play rv">
       <div class="play-tools">
         <div class="l" id="regBtns">
           <button class="chip" data-r="sans" aria-pressed="true">Títulos</button>
@@ -800,8 +830,9 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
       <div class="specimen" id="specimen" contenteditable="true" spellcheck="false" data-reg="sans" aria-label="Texto editable de prueba">Build what’s <span class="it" style="text-transform:none">next.</span></div>
       <p class="mono dim" style="margin-top:16px">Escribí encima — probá la tipografía con tus propias palabras.</p>
     </div>
-
-    <div class="hier rv">
+</div>
+<div class="scr">
+<div class="hier rv">
       <h3 class="display">Tools<br>that<br><span class="it">move.</span></h3>
       <div class="small">
         <span class="mono">16 — Jerarquía</span>
@@ -810,71 +841,87 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
         <span class="mono">OB—001<br>Digital goods<br>Est. 2026</span>
       </div>
     </div>
+</div>
   </div>
 </section>
 
 <!-- ================= 08 SISTEMA GRAFICO ================= -->
-<section class="sec light" id="sistema" data-ch="08 — Sistema gráfico">
+<section class="sec light" id="sistema" data-ch="08 — Sistema gráfico" data-scr="1">
   <div class="wrap">
-    <div class="shead"><div class="n"><b>08</b>Sistema gráfico</div><div class="n" style="text-align:right">Formas + tipografía + fotografía + escala</div></div>
+<div class="scr">
+<div class="shead"><div class="n"><b>08</b>Sistema gráfico</div><div class="n" style="text-align:right">Formas + tipografía + fotografía + escala</div></div>
     <h2 class="display rv" style="margin:0 0 40px;font-size:clamp(46px,7vw,112px);max-width:14ch">Sin ilustraciones. Solo <span class="it">sistema.</span></h2>
     <div class="assets" id="assets"></div>
-
-    <div class="codes">
+</div>
+<div class="scr">
+<div class="codes">
       <div class="rv"><span class="mono">12 — Sistema de códigos</span><h3 class="display" style="margin-top:14px">Archivo. Colección. <span class="it">Catálogo.</span></h3><p style="max-width:40ch;opacity:.75">Pequeños códigos editoriales ordenan las familias de Orbit y convierten cada pieza en parte de una serie.</p></div>
       <div class="codelist rv" style="align-content:flex-start"><span>OB—001</span><span>OB—002</span><span>SYSTEM 01</span><span>OBJECT 03</span><span>VOL.01</span><span>EST.2026</span><span>ORBIT / DIGITAL GOODS</span><span>OB—004</span><span>SYSTEM 02</span><span>V.01</span></div>
     </div>
-
-    <div class="gridd rv" id="gridd">
+</div>
+<div class="scr">
+<div class="gridd rv" id="gridd">
       <div class="cols"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
       <div class="mover" id="mover"></div>
       <div class="txt"><span class="mono">18 — Grilla · 12 columnas</span><span class="mono" style="text-align:right">Pasá el cursor</span></div>
       <h4 class="display">Estructura<br>vs. <span class="it">movimiento.</span></h4>
     </div>
+</div>
   </div>
 </section>
 
 <!-- ================= 09 FOTOGRAFIA ================= -->
-<section class="sec dark" id="fotografia" data-ch="09 — Fotografía">
+<section class="sec dark" id="fotografia" data-ch="09 — Fotografía" data-scr="1">
   <div class="wrap">
-    <div class="shead"><div class="n"><b>09</b>Fotografía y personas</div><div class="n" style="text-align:right">Humano + creativo + cultural</div></div>
+<div class="scr">
+<div class="shead"><div class="n"><b>09</b>Fotografía y personas</div><div class="n" style="text-align:right">Humano + creativo + cultural</div></div>
     <h2 class="display rv" style="margin:0 0 40px;font-size:clamp(46px,7vw,112px);max-width:16ch">La persona forma parte de un <span class="it">universo.</span></h2>
     <div class="ph-grid">
       <figure class="rv"><div class="photo" data-photo="arch" role="img" aria-label="Arquitectura de hormigón en blanco y negro"></div><figcaption class="mono"><span>Arquitectura</span><span>Alto contraste</span></figcaption></figure>
       <figure class="rv"><div class="photo" data-photo="corridor" role="img" aria-label="Persona caminando en un pasillo con luz dura"></div><figcaption class="mono"><span>En movimiento</span><span>Sin posar</span></figcaption></figure>
       <figure class="rv"><div class="photo" data-photo="figure" role="img" aria-label="Persona de espaldas"></div><figcaption class="mono"><span>De espaldas</span><span>Grano</span></figcaption></figure>
     </div>
-    <div class="ph-grid2">
+</div>
+<div class="scr">
+<div class="ph-grid2">
       <figure class="rv"><div class="photo" data-photo="hands" role="img" aria-label="Manos de una diseñadora ordenando impresos sobre una mesa"></div><figcaption class="mono"><span>Procesos</span><span>Impresos · materiales</span></figcaption></figure>
       <figure class="rv"><div class="photo" data-photo="studio" role="img" aria-label="Persona de espaldas trabajando de noche en un estudio"></div><figcaption class="mono"><span>Estudios</span><span>Luz única</span></figcaption></figure>
       <div class="rv ph-note"><span class="mono">Regla</span><p>La persona forma parte del universo. No necesariamente es protagonista: de espaldas, parcial, en movimiento, sin posar.</p><span class="mono dim">Blanco y negro · alto contraste · grano · encuadre cinematográfico</span></div>
     </div>
     <p class="mono dim" style="margin-top:14px">Fotografías de referencia generadas con IA — reemplazar por producción propia cuando exista.</p>
-    <div class="ph-rules">
+</div>
+<div class="scr">
+<div class="ph-rules">
       <div class="rv"><span class="mono">Sí</span><ul><li>Blanco y negro, alto contraste, grano</li><li>Encuadres cinematográficos, ángulos poco convencionales</li><li>Personas creando, estudios, procesos, materiales, impresos</li><li>Creadores, makers, diseñadores: de espaldas, parciales, en movimiento</li><li>Ciudades, arquitectura y espacios culturales</li></ul></div>
       <div class="no rv"><span class="mono">No</span><ul><li>Fotografía corporativa</li><li>Banco de imágenes: gente sonriendo frente a una laptop</li><li>Influencers vendiendo</li><li>Planetas hiperrealistas o espacio literal</li><li>Personas posando como protagonistas</li></ul></div>
     </div>
+</div>
   </div>
 </section>
 
 <!-- ================= 10 VOZ ================= -->
-<section class="sec light" id="voz" data-ch="10 — Voz">
+<section class="sec light" id="voz" data-ch="10 — Voz" data-scr="1">
   <div class="wrap">
-    <div class="shead"><div class="n"><b>10</b>Lenguaje verbal</div><div class="n" style="text-align:right">Corto. Directo. Seguro.</div></div>
+<div class="scr">
+<div class="shead"><div class="n"><b>10</b>Lenguaje verbal</div><div class="n" style="text-align:right">Corto. Directo. Seguro.</div></div>
     <span class="mono" id="tagLabel">23 — Tagline principal</span>
     <h2 class="display tagbig" id="tagBig" role="button" tabindex="0" aria-label="Cambiar tagline">Ideas<br>in <span class="it">motion.</span></h2>
     <div class="tagmeta"><span class="mono" id="tagCount">01 / 06 — Tocá para ver el siguiente</span><span class="mono">Una campaña, un tagline. Nunca todos juntos.</span></div>
-    <div class="voice">
+</div>
+<div class="scr">
+<div class="voice">
       <div class="rv"><span class="mono">Orbit dice</span><ul><li>Build what’s next.</li><li>Ideas in motion.</li><li>Tools that move.</li><li>Make better things.</li><li>From idea to system.</li><li>Resources for real progress.</li><li>Create. Explore. Apply. Advance.</li></ul></div>
       <div class="no rv"><span class="mono">Orbit nunca dice</span><ul><li>“Transformá tu vida hoy.”</li><li>“Ganancias garantizadas.”</li><li>“El secreto definitivo.”</li><li>“Mega pack de 10.000 archivos.”</li><li>Lenguaje de gurú.</li><li>Promesas de milagros.</li></ul></div>
     </div>
+</div>
   </div>
 </section>
 
 <!-- ================= 11 PRODUCTOS ================= -->
-<section class="sec dark" id="productos" data-ch="11 — Productos">
+<section class="sec dark" id="productos" data-ch="11 — Productos" data-scr="1">
   <div class="wrap">
-    <div class="shead"><div class="n"><b>11</b>Arquitectura de productos<br>y packaging digital</div><div class="n" style="text-align:right">Cada producto es<br>un objeto de diseño</div></div>
+<div class="scr">
+<div class="shead"><div class="n"><b>11</b>Arquitectura de productos<br>y packaging digital</div><div class="n" style="text-align:right">Cada producto es<br>un objeto de diseño</div></div>
     <div class="pr-grid">
       <div class="boxstage rv" id="boxStage">
         <div class="box" id="box">
@@ -892,14 +939,18 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
         <div class="fam" id="fam"></div>
       </div>
     </div>
-    <div class="families" id="families"></div>
+</div>
+<div class="scr">
+<div class="families" id="families"></div>
+</div>
   </div>
 </section>
 
 <!-- ================= 12 APLICACIONES ================= -->
-<section class="sec light" id="aplicaciones" data-ch="12 — Aplicaciones">
+<section class="sec light" id="aplicaciones" data-ch="12 — Aplicaciones" data-scr="1">
   <div class="wrap">
-    <div class="shead"><div class="n"><b>12</b>Aplicaciones</div><div class="n" style="text-align:right">La marca no termina en Instagram.<br>Está en todo el recorrido.</div></div>
+<div class="scr">
+<div class="shead"><div class="n"><b>12</b>Aplicaciones</div><div class="n" style="text-align:right">La marca no termina en Instagram.<br>Está en todo el recorrido.</div></div>
 
     <div class="app-sub"><h3 class="display">Landing <span class="it">page</span></h3><span class="mono">27 — Hero oscuro · gran tipografía · círculo Orbit</span></div>
     <div class="browser rv">
@@ -913,8 +964,9 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
         <div class="r"><div class="photo" data-photo="landing"></div><svg class="arc" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M10 100 A 90 90 0 0 1 100 10" fill="none" stroke="currentColor" stroke-width=".25" vector-effect="non-scaling-stroke"/></svg><span class="mono">Mejores herramientas<br>Ideas reales<br>Más posibilidades</span><span class="mono b">OB—001</span></div>
       </div>
     </div>
-
-    <div class="app-sub"><h3 class="display">Laboratorio de <span class="it">posters</span></h3><span class="mono">29 — Construir reconocimiento antes de vender</span></div>
+</div>
+<div class="scr">
+<div class="app-sub"><h3 class="display">Laboratorio de <span class="it">posters</span></h3><span class="mono">29 — Construir reconocimiento antes de vender</span></div>
     <div class="posterlab rv">
       <div class="pl-ctrl">
         <p style="margin:0;max-width:34ch">Combiná titular, color y recurso gráfico. El sistema responde solo: una cosa grande y varias pequeñas.</p>
@@ -925,11 +977,13 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
       </div>
       <div class="pl-out" id="plOut"></div>
     </div>
-
-    <div class="app-sub"><h3 class="display">Redes y <span class="it">ads</span></h3><span class="mono">29–30 — Editorial en el feed · directo en performance</span></div>
+</div>
+<div class="scr">
+<div class="app-sub"><h3 class="display">Redes y <span class="it">ads</span></h3><span class="mono">29–30 — Editorial en el feed · directo en performance</span></div>
     <div class="soc rv" id="soc"></div>
-
-    <div class="app-sub"><h3 class="display">Grilla del <span class="it">feed</span></h3><span class="mono">29 — Construir reconocimiento antes de vender</span></div>
+</div>
+<div class="scr">
+<div class="app-sub"><h3 class="display">Grilla del <span class="it">feed</span></h3><span class="mono">29 — Construir reconocimiento antes de vender</span></div>
     <div class="feedwrap rv">
       <div class="phone">
         <div class="ig-top"><span>orbit.studio</span><span style="font-size:18px;letter-spacing:2px">＋ ≡</span></div>
@@ -954,16 +1008,19 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
         <div style="margin-top:22px"><span class="mono">Mezcla de color del feed</span><div class="feed-mix" id="feedMix"></div></div>
       </div>
     </div>
-
-    <div class="app-sub"><h3 class="display">Objetos y <span class="it">merch</span></h3><span class="mono">33–34 — Microbranding: la marca no necesita ser gigante</span></div>
+</div>
+<div class="scr">
+<div class="app-sub"><h3 class="display">Objetos y <span class="it">merch</span></h3><span class="mono">33–34 — Microbranding: la marca no necesita ser gigante</span></div>
     <div class="merch rv" id="merch"></div>
+</div>
   </div>
 </section>
 
 <!-- ================= 13 LANZAMIENTO ================= -->
-<section class="sec dark" id="lanzamiento" data-ch="13 — Lanzamiento">
+<section class="sec dark" id="lanzamiento" data-ch="13 — Lanzamiento" data-scr="1">
   <div class="wrap">
-    <div class="shead"><div class="n"><b>13</b>Estrategia de lanzamiento<br>Instagram desde cero</div><div class="n" style="text-align:right">Reconocimiento antes de vender.<br>Impacto antes que volumen.</div></div>
+<div class="scr">
+<div class="shead"><div class="n"><b>13</b>Estrategia de lanzamiento<br>Instagram desde cero</div><div class="n" style="text-align:right">Reconocimiento antes de vender.<br>Impacto antes que volumen.</div></div>
     <div class="ln-intro">
       <h2 class="display rv">Entrar en órbita <span class="it">desde cero.</span></h2>
       <div class="rv">
@@ -971,12 +1028,14 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
         <p class="mono dim" style="margin:0">Idea eje de toda la comunicación: problema → herramienta.</p>
       </div>
     </div>
-
-    <div class="ln-sub" style="margin-top:0"><h3 class="display">Las 5 <span class="it">fases</span></h3><span class="mono">De la semana −2 al día 90 · tocá cada fase</span></div>
+</div>
+<div class="scr">
+<div class="ln-sub" style="margin-top:0"><h3 class="display">Las 5 <span class="it">fases</span></h3><span class="mono">De la semana −2 al día 90 · tocá cada fase</span></div>
     <div class="phases rv" role="tablist" id="phases"></div>
     <div class="phase-body rv" id="phaseBody" role="tabpanel"></div>
-
-    <div class="ln-sub"><h3 class="display">Los primeros <span class="it">9 posts</span></h3><span class="mono">Mostrar el problema, esconder la solución · tocá un post</span></div>
+</div>
+<div class="scr">
+<div class="ln-sub"><h3 class="display">Los primeros <span class="it">9 posts</span></h3><span class="mono">Mostrar el problema, esconder la solución · tocá un post</span></div>
     <div class="lgrid">
       <div class="phone rv">
         <div class="ig-top"><span>orbit.studio</span><span style="font-size:18px;letter-spacing:2px">＋ ≡</span></div>
@@ -987,22 +1046,27 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
       </div>
       <div class="brief rv" id="brief" aria-live="polite"></div>
     </div>
-
-    <div class="ln-sub"><h3 class="display">Pilares de <span class="it">contenido</span></h3><span class="mono">Qué se publica y en qué proporción</span></div>
+</div>
+<div class="scr">
+<div class="ln-sub"><h3 class="display">Pilares de <span class="it">contenido</span></h3><span class="mono">Qué se publica y en qué proporción</span></div>
     <div class="pillars rv" id="pillars"></div>
     <div class="pillar-info rv" id="pillarInfo"></div>
-
-    <div class="ln-sub"><h3 class="display">Semana <span class="it">tipo</span></h3><span class="mono">Desde el día 31 · stories todos los días</span></div>
+</div>
+<div class="scr">
+<div class="ln-sub"><h3 class="display">Semana <span class="it">tipo</span></h3><span class="mono">Desde el día 31 · stories todos los días</span></div>
     <div class="week rv" id="week"></div>
-
-    <div class="ln-sub"><h3 class="display">Cómo traer <span class="it">seguidores</span></h3><span class="mono">Tácticas de crecimiento para una cuenta nueva</span></div>
+</div>
+<div class="scr">
+<div class="ln-sub"><h3 class="display">Cómo traer <span class="it">seguidores</span></h3><span class="mono">Tácticas de crecimiento para una cuenta nueva</span></div>
     <div class="tactics" id="tactics"></div>
-
-    <div class="ln-sub"><h3 class="display">Más allá de <span class="it">Instagram</span></h3><span class="mono">El lanzamiento de marca es multicanal</span></div>
+</div>
+<div class="scr">
+<div class="ln-sub"><h3 class="display">Más allá de <span class="it">Instagram</span></h3><span class="mono">El lanzamiento de marca es multicanal</span></div>
     <div class="chan" id="chan"></div>
 
     <div class="ln-sub"><h3 class="display">Qué <span class="it">medir</span></h3><span class="mono">Revisión semanal · ajustar lo que no funciona</span></div>
     <div class="metrics" id="metrics"></div>
+</div>
   </div>
 </section>
 
@@ -1016,9 +1080,10 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
 </section>
 
 <!-- ================= 14 PRINCIPIOS ================= -->
-<section class="sec light" id="principios" data-ch="15 — Principios">
+<section class="sec light" id="principios" data-ch="15 — Principios" data-scr="1">
   <div class="wrap">
-    <div class="shead"><div class="n"><b>15</b>Principios</div><div class="n" style="text-align:right">Impacto · Reconocimiento · Límites</div></div>
+<div class="scr">
+<div class="shead"><div class="n"><b>15</b>Principios</div><div class="n" style="text-align:right">Impacto · Reconocimiento · Límites</div></div>
     <div class="pri">
       <div class="rv">
         <span class="mono">35 — Principio de impacto</span>
@@ -1046,11 +1111,14 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
         </ul>
       </div>
     </div>
-    <div class="nots">
+</div>
+<div class="scr">
+<div class="nots">
       <div class="rv"><span class="mono">40 — Qué no hacer</span><h3 class="display" style="margin:14px 0 0;font-size:clamp(36px,4.6vw,72px)">Orbit nunca debería <span class="it">convertirse</span> en…</h3></div>
       <ul class="rv"><li>Branding espacial literal</li><li>Startup futurista violeta</li><li>Marca beige aspiracional</li><li>Marketplace de templates</li><li>Curso de marketing</li><li>Tienda de PDFs baratos</li><li>Branding corporativo</li><li>Estética gamer</li><li>Estética Web3</li><li>Estética “IA” cliché</li></ul>
     </div>
     <div class="cities" aria-label="Una marca que podría existir en Londres, Berlín, Copenhague, Nueva York, Buenos Aires y Ciudad de México"><div id="citiesTrack"></div></div>
+</div>
   </div>
 </section>
 
